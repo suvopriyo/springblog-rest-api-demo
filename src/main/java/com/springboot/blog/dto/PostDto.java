@@ -12,6 +12,16 @@ public class PostDto {
     private String description;
     private String content;
 
+    public PostDto(long id, String title, String description, String content) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.content = content;
+    }
+
+    public PostDto() {
+    }
+
     public long getId() {
         return id;
     }

@@ -5,8 +5,8 @@ import lombok.*;
 import org.hibernate.bytecode.enhance.spi.EnhancementInfo;
 
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+
+
 
 @Entity
 @Table(name="posts", uniqueConstraints = {@UniqueConstraint(columnNames = {"title"})})
@@ -17,6 +17,16 @@ public class Post {
             strategy = GenerationType.IDENTITY
     )
     private Long id;
+
+    public Post(Long id, String title, String description, String content) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.content = content;
+    }
+
+    public Post() {
+    }
 
     // Add a titel
     @Column(name = "title", nullable = false)

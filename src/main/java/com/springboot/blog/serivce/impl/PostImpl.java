@@ -94,7 +94,8 @@ public class PostImpl implements PostService {
 
     public Post mapToEntity(PostDto postDto)
     {
-        Post post = new Post();
+        Post post;
+        post = new Post();
 
         post.setContent(postDto.getContent());
         post.setDescription(postDto.getDescription());
