@@ -18,6 +18,7 @@ public class Post {
     )
     private Long id;
 
+    // Add a titel
     @Column(name = "title", nullable = false)
     private String title;
     @Column(name = "description", nullable = false)
